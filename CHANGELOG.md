@@ -1,14 +1,14 @@
-# 1.0.4版本
+# Version 1.0.4
 
-1. 增加TickOverview支持
-2. 增加stream流式写入支持
+1. Add TickOverview support
+2. Add stream writing support
 
-# 1.0.3版本
+# 1.0.3 version
 
-1. 修复K线数据量统计的问题（使用新的count_documents函数）
+1. Fix the problem of counting the amount of K-line data (using the new count_documents function)
 
-# 1.0.2版本
+# 1.0.2 version
 
-1. 支持pymongo 4.0版本新增的批量写入功能，提高数据保存速度
-2. 完善函数和变量的类型声明
-3. 修复由于时间戳的时区信息缺失，导致的数据加载范围偏差问题
+1. Support pymongo 4.0 new batch write function, improve the data saving speed
+2. Improve the type declaration of functions and variables
+3. Fix the deviation of data loading range caused by missing time zone information in timestamps.

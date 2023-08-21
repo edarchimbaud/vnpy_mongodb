@@ -1,4 +1,4 @@
-# VeighNa框架的MongoDB数据库接口
+# MongoDB database interface for VeighNa Framework
 
 <p align="center">
   <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/vnpy-logo.png"/>
@@ -10,15 +10,15 @@
     <img src ="https://img.shields.io/badge/python-3.7|3.8|3.9|3.10-blue.svg" />
 </p>
 
-## 说明
+## Description
 
-基于pymongo 4.1.1 开发的MongoDB数据库接口。
+MongoDB database interface based on pymongo 4.1.1.
 
-## 使用
+## Use
 
-在VeighNa中使用MongoDB时，需要在全局配置中填写以下字段信息：
+When using MongoDB in VeighNa, you need to fill in the following field information in the global configuration:
 
-|名称|含义|必填|举例|
+|Name|Meaning|Required|Example|
 |---------|----|---|---|
 |database.name|名称|是|mongodb|
 |database.host|地址|是|localhost|
