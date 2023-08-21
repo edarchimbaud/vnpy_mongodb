@@ -20,9 +20,9 @@ When using MongoDB in VeighNa, you need to fill in the following field informati
 
 |Name|Meaning|Required|Example|
 |---------|----|---|---|
-|database.name|名称|是|mongodb|
-|database.host|地址|是|localhost|
-|database.port|端口|是|27017|
-|database.database|实例|是|vnpy|
-|database.user|用户名|否||
-|database.password|密码|否||
+|database.name|Name|Yes|mongodb|
+|database.host|Address|Yes|localhost|
+|database.port|Port|Yes|27017|
+|database.database|Instance|Yes|vnpy|
+|database.user|Username|No||
+|database.password|Password|No||
