@@ -44,7 +44,7 @@ class MongodbDatabase(BaseDatabase):
         # Initializing the database
         self.db: Database = self.client[self.database]
 
-        # Initialize K-Line Data Table
+        # Initialize Bar Data Table
         self.bar_collection: Collection = self.db["bar_data"]
         self.bar_collection.create_index(
             [
@@ -67,7 +67,7 @@ class MongodbDatabase(BaseDatabase):
             unique=True,
         )
 
-        # Initializing the K-Line overview table
+        # Initializing the Bar overview table
         self.bar_overview_collection: Collection = self.db["bar_overview"]
         self.bar_overview_collection.create_index(
             [
@@ -89,7 +89,7 @@ class MongodbDatabase(BaseDatabase):
         )
 
     def save_bar_data(self, bars: List[BarData], stream: bool = False) -> bool:
-        """Save K-line data"""
+        """Save bar data"""
         requests: List[ReplaceOne] = []
 
         for bar in bars:
@@ -238,7 +238,7 @@ class MongodbDatabase(BaseDatabase):
         start: datetime,
         end: datetime,
     ) -> List[BarData]:
-        """Read K-line data"""
+        """Read bar data"""
         filter: dict = {
             "symbol": symbol,
             "exchange": exchange.value,
@@ -292,7 +292,7 @@ class MongodbDatabase(BaseDatabase):
     def delete_bar_data(
         self, symbol: str, exchange: Exchange, interval: Interval
     ) -> int:
-        """Delete K-line data"""
+        """Delete bar data"""
         filter: dict = {
             "symbol": symbol,
             "exchange": exchange.value,
@@ -314,7 +314,7 @@ class MongodbDatabase(BaseDatabase):
         return result.deleted_count
 
     def get_bar_overview(self) -> List[BarOverview]:
-        """Query the K-line summary information in the database"""
+        """Query the bar summary information in the database"""
         c: Cursor = self.bar_overview_collection.find()
 
         overviews: List[BarOverview] = []

@@ -5,7 +5,7 @@
 
 # 1.0.3 version
 
-1. Fix the problem of counting the amount of K-line data (using the new count_documents function)
+1. Fix the problem of counting the amount of bar data (using the new count_documents function)
 
 # 1.0.2 version
 
